@@ -1,0 +1,22 @@
+.clip-bottom-right {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 29px),
+    calc(100% - 29px) 100%,
+    0 100%
+  );
+  position: relative;
+}
+
+
+.clip-bottom-right::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 29px solid #CFCFCF; 
+  border-left: 29px solid transparent;
+}
